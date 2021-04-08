@@ -15,7 +15,7 @@ export default class Todo{
     // armazena os todos
     async store({text, done}){
         // req post que envia os dados {text, done} para nosso bd de todos
-        const {data} = await axios.post('/todos', text, done)
+        const {data} = await axios.post('/todos', {text, done})
         return data 
     }
     
@@ -23,7 +23,7 @@ export default class Todo{
     async update({id, text, done}){
         // req put, atualiza um todo de acordo com o ID
         // essas rotas foram criadas automaticamente pelo json-server
-        const {data} = await axios.put(`/todos/${id}`, text, done)
+        const {data} = await axios.put(`/todos/${id}`, {text, done})
         return data 
     }
 

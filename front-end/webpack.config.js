@@ -20,5 +20,13 @@ module.exports = {
         contentBase: path.resolve(__dirname, './public'),
         port:3000 // colocamos a porta que queremos que o servidor rode
     },
-    devtool: 'source-map'
+    devtool: 'source-map',
+    module: {
+        rules: [
+          {
+            test: /\.css$/i,
+            use: ["style-loader", "css-loader"],
+          },
+        ],
+      },
 }

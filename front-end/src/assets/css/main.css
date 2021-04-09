@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: minmax(0px, 400px);
     grid-gap: 2rem;
+    justify-content: center;
   }
   
   form {

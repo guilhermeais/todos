@@ -1,5 +1,6 @@
 // vou criar uma variavel para armazenar o caminho do main.js, pois o caminho pode variar de acordo com o sistema operacional
 const path = require('path') // pegamos o pacote path que já vem por padrão no node
+const  webpack  = require('webpack')
 
 module.exports = {
     //arquivo de entrada:
@@ -29,4 +30,15 @@ module.exports = {
           },
         ],
       },
+      resolve: {
+        alias: {
+          vue: 'vue/dist/vue.esm-bundler.js',
+        },
+      },
+      plugins: [
+        new webpack.DefinePlugin({
+          __VUE_OPTIONS_API__: true,
+          __VUE_PROD_DEVTOOLS__: false,
+        }),
+      ],
 }

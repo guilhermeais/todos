@@ -8,12 +8,13 @@
   </head>
   <body>
     <div id="app">
-      <form>
-        <input type="text" placeholder="Todo" />
+      <form @submit.prevent="createTodo()">
+        
+        <input type="text" placeholder="Todo" v-model="form.text" />
 
         <label class="checkbox-input">
-          Não concluída
-          <input type="checkbox" checked="true" />
+          {{form.done ? 'Concluída' : 'Não concluída'}}
+          <input type="checkbox" v-model="form.done" :checked="form.done" />
           <span class="checkmark"></span>
         </label>
 
@@ -23,22 +24,16 @@
       <ul class="todos">
         <span class="todos-title">Todos</span>
 
-        <li class="todo">
+        <li :class="['todo', {done: todo.done}]" v-for="todo in todos">
           <label class="checkbox-input">
-            <input type="checkbox" checked="true" />
+            <input type="checkbox" :checked="todo.done" />
             <span class="checkmark"></span>
           </label>
-          <span class="todo-text">Lavar Roupa</span>
+          <span class="todo-text">{{todo.text}}</span>
           <a class="todo-delete"></a>
         </li>
-        <li class="todo">
-          <label class="checkbox-input">
-            <input type="checkbox" checked="true" />
-            <span class="checkmark"></span>
-          </label>
-          <span class="todo-text">Beber água</span>
-          <a class="todo-delete"></a>
-        </li>
+        
+        
       </ul>
     </div>
     <script src="./bundle.js"></script>

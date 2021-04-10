@@ -1,74 +1,34 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "Lavar as roupas",
-      "done": true
+      "text": "Estudar Bootcamp",
+      "done": false,
+      "id": 3
     },
     {
-      "id": 2,
-      "text": "Varrer a casa",
-      "done": true
+      "text": "Fazer atividade da faculdade",
+      "done": false,
+      "id": 4
     },
     {
-      "id": 3,
-      "text": "Brincar com o cachorro",
-      "done": true
-    },
-    {
-      "id": 4,
-      "text": "Ir à academia",
-      "done": false
-    },
-    {
-      "text": "Correr até o posto",
+      "text": "",
       "done": false,
       "id": 5
     },
     {
-      "text": "Teste",
+      "text": "",
       "done": false,
       "id": 6
     },
     {
-      "text": "Teste",
-      "done": true,
+      "text": "",
+      "done": false,
       "id": 7
     },
     {
-      "text": "teste",
+      "text": "",
       "done": false,
       "id": 8
-    },
-    {
-      "text": "teste",
-      "done": true,
-      "id": 9
-    },
-    {
-      "text": "teste",
-      "done": false,
-      "id": 10
-    },
-    {
-      "text": "sjkadfksljdfklsdf",
-      "done": true,
-      "id": 11
-    },
-    {
-      "text": "1231322",
-      "done": true,
-      "id": 12
-    },
-    {
-      "text": "56165165156",
-      "done": true,
-      "id": 13
-    },
-    {
-      "text": "ygygyug",
-      "done": false,
-      "id": 14
     }
   ]
 }

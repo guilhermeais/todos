@@ -75,6 +75,24 @@ body {
     grid-gap: 0.5rem;
   }
   
+  .spinner{
+    
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #2b6f75;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 50%;
+    animation: spin 1s linear infinite;
+  }
+
+  /* animation spinner */
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
   .todos-title {
     color: #ececf6;
   }

@@ -24,13 +24,18 @@
       <ul class="todos">
         <span class="todos-title">Todos</span>
 
+        <div  v-if="loading">
+          <div class="spinner"></div>
+        </div>
+
         <li :class="['todo', {done: todo.done}]" v-for="todo in todos">
-          <label class="checkbox-input">
+
+          <label class="checkbox-input" @click="toggleTodoStatus(todo)">
             <input type="checkbox" :checked="todo.done" />
             <span class="checkmark"></span>
           </label>
           <span class="todo-text">{{todo.text}}</span>
-          <a class="todo-delete"></a>
+          <a class="todo-delete" @click="destroyTodo(todo.id)"></a>
         </li>
         
         
